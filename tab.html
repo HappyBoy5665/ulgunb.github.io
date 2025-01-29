@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Таблица с изображениями</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+        img {
+            width: 200px;
+        }
+    </style>
+    <script>
+        function openImage(imageUrl) {
+            var width = window.innerWidth * 0.8;
+            var height = window.innerHeight * 0.8;
+            var newWindow = window.open(imageUrl, '_blank', 'width=' + width + 'height=' + height);
+            newWindow.focus();
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><a href="#" onclick="openImage('photo1.jpg'); return false;">
+                <img src="photo1.jpg" alt="Фотография 1">
+            </a></td>
+            <td><a href="#" onclick="openImage('photo2.jpg'); return false;">
+                <img src="photo2.jpg" alt="Фотография 2">
+            </a></td>
+        </tr>
+        <tr>
+            <td><a href="#" onclick="openImage('photo3.jpg'); return false;">
+                <img src="photo3.jpg" alt="Фотография 3">
+            </a></td>
+            <td><a href="#" onclick="openImage('photo4.jpg'); return false;">
+                <img src="photo4.jpg" alt="Фотография 4">
+            </a></td>
+        </tr>
+    </table>
+</body>
+</html>
